@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Website elements hider",
+  "version": "1.0",
+  "description": "Hides specific elements from web interface.",
+  "icons": {},
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [""],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {},
+    "default_popup": "popup.html"
+  }
+}
